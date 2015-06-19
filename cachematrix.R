@@ -1,7 +1,7 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Function to cache the inverse of a matrix for speedy reference later
+## Properties: get/set, getinverse/setinverse
 
-## Write a short comment describing this function
+
 ## Creates a "special" matrix that can hold a matrix and its inverse in cache
 ## Properties to get/set the matrix and get/set the inverse
 makeCacheMatrix <- function(x = matrix()) {
@@ -25,8 +25,6 @@ makeCacheMatrix <- function(x = matrix()) {
              getinverse = getinverse)
 }
 
-
-## Write a short comment describing this function
 ## Returns the inverse matrix of x
 ## First checks to see if inverse has been cached in memory
 ## If not, calls makeCacheMatrix to create inverse and cache
@@ -43,5 +41,5 @@ cacheSolve <- function(x, ...) {
         data <- x$get()
         m <- solve(data, ...)
         x$setinverse(m)
-        m        
+        m
 }
